@@ -142,7 +142,7 @@ const Sidebar = ({ user, isCollapsed, setIsCollapsed }) => {
                             <Link className={cn(
                                 sidebarStyles.footerLink.base,
                                 isCollapsed && sidebarStyles.footerLink.collapsed,
-                            )} to="https://www.hexagondigitalservices.com/contact">
+                            )} to="/">
                                 <HelpCircle size={20} className='text-gray-500' />
                                 {!isCollapsed && <span>Support</span>}
                             </Link>
