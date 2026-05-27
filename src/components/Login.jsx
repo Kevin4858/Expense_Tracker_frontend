@@ -3,7 +3,7 @@ import { loginStyles } from "../assets/dummyStyles.js";
 import { Mail, Lock, User, EyeOff, Eye } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { API_URL } from "../config/api.js";
+import { API_BASE } from "../config/api.js";
 
 const Login = ({ onLogin }) => {
   const [email, setEmail] = useState("");
@@ -17,7 +17,7 @@ const Login = ({ onLogin }) => {
   // to fetch profile
   const fetchProfile = async (token) => {
     if (!token) return null;
-    const res = await axios.get(`${API_URL}/api/user/me`, {
+    const res = await axios.get(`${API_BASE}/user/me`, {
       headers: {
         Authorization: `Bearer ${token}`
       },
@@ -43,7 +43,7 @@ const Login = ({ onLogin }) => {
 
     try {
       const res = await axios.post(
-        `${API_URL}/api/user/login`,
+        `${API_BASE}/user/login`,
         { email, password },
         { headers: { "Content-Type": "application/json" } },
       );

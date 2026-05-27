@@ -8,7 +8,7 @@ import axios from "axios";
 import Income from "./pages/Income.jsx";
 import Expense from "./pages/Expense.jsx";
 import Profile from "./pages/Profile.jsx";
-import { API_URL } from "./config/api.js";
+import { API_BASE } from "./config/api.js";
 
 // to get transactions from localstorage
 const getTransactionsFromStorage = () => {
@@ -56,7 +56,7 @@ const App = () => {
           setToken(storedToken);
           // Fetch fresh user data if token exists
           try {
-            const response = await axios.get(`${API_URL}/api/user/me`, {
+            const response = await axios.get(`${API_BASE}/user/me`, {
               headers: {
                 Authorization: `Bearer ${storedToken}`
               }
@@ -155,7 +155,7 @@ const App = () => {
 
         if (storedToken) {
           try {
-            const res = await axios.get(`${API_URL}/api/user/me`, {
+            const res = await axios.get(`${API_BASE}/user/me`, {
               headers: { Authorization: `Bearer ${storedToken}` }
             });
 
