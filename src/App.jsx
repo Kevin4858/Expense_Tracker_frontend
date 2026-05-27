@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Navigate, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
-import Dashboard from "./pages/Dashboard";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
+import Dashboard from "./pages/Dashboard.jsx";
+import Login from "./components/Login.jsx";
+import Signup from "./components/Signup.jsx";
 import axios from "axios";
-import Income from "./pages/Income";
-import Expense from "./pages/Expense";
-import Profile from "./pages/Profile";
+import Income from "./pages/Income.jsx";
+import Expense from "./pages/Expense.jsx";
+import Profile from "./pages/Profile.jsx";
 import { API_URL } from "./config/api.js";
 
 // to get transactions from localstorage

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { transactionItemStyles } from '../assets/dummyStyles'
-import { colorClasses } from '../assets/color'
+import { transactionItemStyles } from '../assets/dummyStyles.js'
+import { colorClasses } from '../assets/color.jsx'
 import { Edit, IndianRupee, Save, Trash2, X } from 'lucide-react';
 
 const TransactionItem = ({

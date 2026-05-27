@@ -1,14 +1,14 @@
 import React, { useEffect, useMemo, useState } from 'react'
-import { dashboardStyles, trendStyles, chartStyles } from '../assets/dummyStyles'
-import { GAUGE_COLORS, COLORS, INCOME_CATEGORY_ICONS, EXPENSE_CATEGORY_ICONS } from '../assets/color'
+import { dashboardStyles, trendStyles, chartStyles } from '../assets/dummyStyles.js'
+import { GAUGE_COLORS, COLORS, INCOME_CATEGORY_ICONS, EXPENSE_CATEGORY_ICONS } from '../assets/color.jsx'
 import { useOutletContext } from 'react-router-dom';
 import axios from 'axios';
-import { getTimeFrameRange, getPreviousTimeFrameRange, calculateData } from '../components/Helpers';
+import { getTimeFrameRange, getPreviousTimeFrameRange, calculateData } from '../components/Helpers.jsx';
 import { ArrowDown, BarChart2, TrendingUp as ProfitIcon, PieChart as PieChartIcon, ChevronDown, ChevronUp, PiggyBank, Plus, ShoppingCart, TrendingUp, Wallet, IndianRupee} from 'lucide-react';
-import FinancialCard from '../components/FinancialCard';
-import GaugeCard from '../components/GaugeCard';
+import FinancialCard from '../components/FinancialCard.jsx';
+import GaugeCard from '../components/GaugeCard.jsx';
 import { Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
-import AddTransactionModal from '../components/Add';
+import AddTransactionModal from '../components/Add.jsx';
 import { API_BASE } from "../config/api.js";
 
 const getAuthHeader = () => {

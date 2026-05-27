@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { sidebarStyles, cn } from '../assets/dummyStyles';
+import { sidebarStyles, cn } from '../assets/dummyStyles.js';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ArrowDown, ArrowUp, HelpCircle, Home, LogOut, Menu, User, X } from 'lucide-react';

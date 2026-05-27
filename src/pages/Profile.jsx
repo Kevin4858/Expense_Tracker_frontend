@@ -1,5 +1,5 @@
 import React, { memo, useCallback, useEffect, useState } from 'react'
-import { profileStyles } from '../assets/dummyStyles'
+import { profileStyles } from '../assets/dummyStyles.js'
 import Modal from 'react-modal';
 import { Eye, EyeOff, Lock, User, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';

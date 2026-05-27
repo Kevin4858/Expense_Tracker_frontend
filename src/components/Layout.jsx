@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
-import { styles } from '../assets/dummyStyles';
-import Navbar from './Navbar';
-import Sidebar from './Sidebar';
+import { styles } from '../assets/dummyStyles.js';
+import Navbar from './Navbar.jsx';
+import Sidebar from './Sidebar.jsx';
 import { ArrowUp, Car, ChevronDown, ChevronUp, Clock, CreditCard, Gift, Home, IndianRupee, Info, Maximize, PieChart, PiggyBank, RefreshCw, ShoppingCart, TrendingUp, Utensils, Zap } from 'lucide-react';
 import { Activity } from 'lucide-react';
 import axios from 'axios';

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react'
-import { navbarStyles } from '../assets/dummyStyles'
+import { navbarStyles } from '../assets/dummyStyles.js'
 import img1 from '../assets/logo.png';
 import { useNavigate } from 'react-router-dom';
 import { ChevronDown, User, LogOut } from 'lucide-react';

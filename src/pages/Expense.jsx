@@ -21,14 +21,14 @@ import {
   ReferenceLine,
 } from "recharts";
 import axios from "axios";
-import { exportToExcel } from "../utils/exportUtils";
-import FinancialCard from "../components/FinancialCard";
-import TimeFrameSelector from "../components/TimeFrame";
-import TransactionItem from "../components/TransactionItem";
-import AddTransactionModal from "../components/Add";
-import { getTimeFrameRange, generateChartPoints } from "../components/Helpers";
-import { CATEGORY_ICONS } from "../assets/color";
-import { expensePageStyles as styles } from "../assets/dummyStyles";
+import { exportToExcel } from "../utils/exportUtils.js";
+import FinancialCard from "../components/FinancialCard.jsx";
+import TimeFrameSelector from "../components/TimeFrame.jsx";
+import TransactionItem from "../components/TransactionItem.jsx";
+import AddTransactionModal from "../components/Add.jsx";
+import { getTimeFrameRange, generateChartPoints } from "../components/Helpers.jsx";
+import { CATEGORY_ICONS } from "../assets/color.jsx";
+import { expensePageStyles as styles } from "../assets/dummyStyles.js";
 import { API_BASE } from "../config/api.js";
 
 /**

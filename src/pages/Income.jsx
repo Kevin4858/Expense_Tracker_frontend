@@ -22,14 +22,14 @@ import {
   ReferenceLine,
 } from "recharts";
 import axios from "axios";
-import { exportToExcel } from "../utils/exportUtils";
-import AddTransactionModal from "../components/Add";
-import TransactionItem from "../components/TransactionItem";
-import TimeFrameSelector from "../components/TimeFrame";
-import FinancialCard from "../components/FinancialCard";
-import { getTimeFrameRange, generateChartPoints } from "../components/Helpers";
-import { INCOME_COLORS, CATEGORY_ICONS_Inc } from "../assets/color";
-import { incomeStyles as styles } from "../assets/dummyStyles";
+import { exportToExcel } from "../utils/exportUtils.js";
+import AddTransactionModal from "../components/Add.jsx";
+import TransactionItem from "../components/TransactionItem.jsx";
+import TimeFrameSelector from "../components/TimeFrame.jsx";
+import FinancialCard from "../components/FinancialCard.jsx";
+import { getTimeFrameRange, generateChartPoints } from "../components/Helpers.jsx";
+import { INCOME_COLORS, CATEGORY_ICONS_Inc } from "../assets/color.jsx";
+import { incomeStyles as styles } from "../assets/dummyStyles.js";
 import { API_URL } from "../config/api.js";
 
 //helps in converting to ISO
