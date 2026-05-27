@@ -9,8 +9,7 @@ import FinancialCard from '../components/FinancialCard';
 import GaugeCard from '../components/GaugeCard';
 import { Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
 import AddTransactionModal from '../components/Add';
-
-const API_BASE = 'http://localhost:4000/api';
+import { API_BASE } from "../config/api.js";
 
 const getAuthHeader = () => {
   const token = localStorage.getItem("token") || localStorage.getItem("authToken");

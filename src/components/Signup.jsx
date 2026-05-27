@@ -3,8 +3,9 @@ import { signupStyles } from '../assets/dummyStyles'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { ArrowLeft, Eye, EyeOff, Lock, Mail, User } from 'lucide-react';
+import { API_URL } from "../config/api.js";
 
-const Signup = ({ API_URL = "http://localhost:4000", onSignup }) => {
+const Signup = ({ onSignup }) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");

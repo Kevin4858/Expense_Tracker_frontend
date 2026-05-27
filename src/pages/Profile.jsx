@@ -5,8 +5,7 @@ import { Eye, EyeOff, Lock, User, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
-
-const BASE_URL = "http://localhost:4000/api";
+import { API_BASE } from "../config/api.js";
 
 Modal.setAppElement('#root');
 // Move PasswordInput component outside of ProfilePage to prevent recreation on every render
@@ -82,7 +81,7 @@ const Profile = ({ onUpdateProfile, onLogout }) => {
             setLoading(true);
             const config = {
                 method,
-                url: `${BASE_URL}${endpoint}`,
+                url: `${API_BASE}${endpoint}`,
                 headers: { Authorization: `Bearer ${token}` },
             }
             if (data) config.data = data;

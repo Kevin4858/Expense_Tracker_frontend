@@ -30,8 +30,7 @@ import FinancialCard from "../components/FinancialCard";
 import { getTimeFrameRange, generateChartPoints } from "../components/Helpers";
 import { INCOME_COLORS, CATEGORY_ICONS_Inc } from "../assets/color";
 import { incomeStyles as styles } from "../assets/dummyStyles";
-
-const API_BASE = "http://localhost:4000";
+import { API_URL } from "../config/api.js";
 
 //helps in converting to ISO
 function toIsoWithClientTime(dateValue) {
@@ -290,7 +289,7 @@ const Income = () => {
   const fetchOverview = useCallback(
     async (range = timeFrame ?? "monthly") => {
       try {
-        const res = await axios.get(`${API_BASE}/api/income/overview`, {
+        const res = await axios.get(`${API_URL}/api/income/overview`, {
           headers: getAuthHeaders(),
           params: { range },
         });
@@ -360,7 +359,7 @@ const Income = () => {
         date: toIsoWithClientTime(newTransaction.date),
       };
 
-      await axios.post(`${API_BASE}/api/income/add`, payload, {
+      await axios.post(`${API_URL}/api/income/add`, payload, {
         headers: { "Content-Type": "application/json", ...getAuthHeaders() },
       });
       await refreshTransactions();
@@ -403,7 +402,7 @@ const Income = () => {
         date: toIsoWithClientTime(editForm.date),
       };
 
-      await axios.put(`${API_BASE}/api/income/update/${editingId}`, payload, {
+      await axios.put(`${API_URL}/api/income/update/${editingId}`, payload, {
         headers: { "Content-Type": "application/json", ...getAuthHeaders() },
       });
 
@@ -436,7 +435,7 @@ const Income = () => {
 
       try {
         setLoading(true);
-        await axios.delete(`${API_BASE}/api/income/delete/${id}`, {
+        await axios.delete(`${API_URL}/api/income/delete/${id}`, {
           headers: getAuthHeaders(),
         });
 
@@ -456,7 +455,7 @@ const Income = () => {
   //to download the excel sheet
   const handleExport = useCallback(async () => {
     try {
-      const res = await axios.get(`${API_BASE}/api/income/downloadexcel`, {
+      const res = await axios.get(`${API_URL}/api/income/downloadexcel`, {
         headers: getAuthHeaders(),
         responseType: "blob",
       });

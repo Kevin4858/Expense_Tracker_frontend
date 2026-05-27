@@ -8,8 +8,7 @@ import axios from "axios";
 import Income from "./pages/Income";
 import Expense from "./pages/Expense";
 import Profile from "./pages/Profile";
-
-const API_URL = "http://localhost:4000";
+import { API_URL } from "./config/api.js";
 
 // to get transactions from localstorage
 const getTransactionsFromStorage = () => {
@@ -57,7 +56,7 @@ const App = () => {
           setToken(storedToken);
           // Fetch fresh user data if token exists
           try {
-            const response = await axios.get("http://localhost:4000/api/user/me", {
+            const response = await axios.get(`${API_URL}/api/user/me`, {
               headers: {
                 Authorization: `Bearer ${storedToken}`
               }

@@ -4,8 +4,7 @@ import img1 from '../assets/logo.png';
 import { useNavigate } from 'react-router-dom';
 import { ChevronDown, User, LogOut } from 'lucide-react';
 import axios from 'axios';
-
-const BASE_URL = 'http://localhost:4000'
+import { API_URL } from "../config/api.js";
 
 const Navbar = ({ user: propUser, onLogout }) => {
     const navigate = useNavigate();
@@ -24,7 +23,7 @@ const Navbar = ({ user: propUser, onLogout }) => {
                 const token = localStorage.getItem("token");
                 if (!token) return;
 
-                const response = await axios.get(`${BASE_URL}/api/user/me`, {
+                const response = await axios.get(`${API_URL}/api/user/me`, {
                     headers: { Authorization: `Bearer ${token}` }
                 })
                 const userData = response.data.user || response.data;
