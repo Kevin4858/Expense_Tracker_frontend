@@ -612,7 +612,7 @@ const Dashboard = () => {
                     </div>
                   </div>
                   <div className={dashboardStyles.transactionAmount}>
-                    <p className={dashboardStyles.expenseAmount}>-${Math.abs(transaction.amount).toLocaleString()}</p>
+                    <p className={dashboardStyles.expenseAmount}>-₹{Math.abs(transaction.amount).toLocaleString()}</p>
                     <p className={dashboardStyles.transactionDate}>{new Date(transaction.date).toLocaleDateString()}</p>
                   </div>
                 </div>
